@@ -142,7 +142,9 @@
         },
         created() {
             this.loadUsers();
-            Fire.$on('AfterCreate')
+            Fire.$on('AfterCreate', () =>{
+              this.loadUsers();
+            })
         }
     }
 </script>

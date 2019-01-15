@@ -2017,8 +2017,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
+    var _this2 = this;
+
     this.loadUsers();
-    Fire.$on('AfterCreate');
+    Fire.$on('AfterCreate', function () {
+      _this2.loadUsers();
+    });
   }
 });
 
